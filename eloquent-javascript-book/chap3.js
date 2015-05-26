@@ -4,10 +4,10 @@ var square = function(x) {
 	return x*x;
 }
 
-debug(square(2));
+console.log(square(2));
 
 var makeNoise = function() {
-  debug("Pling!");
+  console.log("Pling!");
 };
 
 makeNoise();
@@ -19,7 +19,7 @@ var power = function(base, exponent) {
   return result;
 };
 
-debug(power(2, 4));
+console.log(power(2, 4));
 
 
 // scoping of var with functions
@@ -30,14 +30,14 @@ var f1 = function() {
   var x = "inside f1";
 };
 f1();
-debug(x);
+console.log(x);
 // → outside
 
 var f2 = function() {
   x = "inside f2";
 };
 f2();
-debug(x);
+console.log(x);
 // → inside f2
 
 
@@ -64,7 +64,7 @@ var landscape = function() {
   return result;
 };
 
-debug(landscape());
+console.log(landscape());
 
 
 // Only functions create local scopes. Just { } will not.
@@ -120,9 +120,9 @@ function power(base, exponent) {
   return result;
 }
 
-debug(power(4));
+console.log(power(4));
 // → 16
-debug(power(4, 3));
+console.log(power(4, 3));
 // → 64
 
 
@@ -135,9 +135,9 @@ function wrapValue(n) {
 
 var wrap1 = wrapValue(1);
 var wrap2 = wrapValue(2);
-debug(wrap1());
+console.log(wrap1());
 // → 1
-debug(wrap2());
+console.log(wrap2());
 // → 2
 
 // Being able to reference a specific instance of local variables in an
@@ -154,7 +154,7 @@ function multiplier(factor) {
 }
 
 var twice = multiplier(2);
-debug(twice(5));
+console.log(twice(5));
 // → 10
 
 
